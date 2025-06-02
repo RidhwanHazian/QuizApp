@@ -67,6 +67,7 @@ body {
     border-radius: 6px;
     cursor: pointer;
     border: 1px solid #81A1C1;
+    color: #D8DEE9;
     transition: 0.3s ease;
 }
 
@@ -79,6 +80,7 @@ body {
 .config-option button:hover,
 .quiz-content .answer-option:hover {
     background: #81A1C1;
+    color: #2E3440;
 }
 
 .question-options button {
@@ -118,7 +120,9 @@ body {
     align-items: center;
     padding: 14px 25px;
     justify-content: space-between;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.09);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+    background: #434C5E;
+    color: #D8DEE9;
 }
 
 .quiz-header .quiz-title {
@@ -171,7 +175,7 @@ body {
     font-weight: 500;
     cursor: pointer;
     justify-content: space-between;
-    border: 1px solid #B5ACFF;
+    border: 1px solid #81A1C1;
     transition: 0.3s ease;
     color: #D8DEE9;
 }
@@ -245,6 +249,10 @@ body {
     padding: 12px 20px;
     background: #88C0D0;
     color: #2E3440;
+}
+
+.result-container .try-again:hover {
+    background-color: #81A1C1;
 }
 
 /*Media query code for mobile */
