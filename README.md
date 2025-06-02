@@ -1,0 +1,1 @@
+I was curious about how Google Forms handles quizzes, data collection, and submissions. So, I decided to build my own quiz project to understand the inner workings like validation, form submission, and result handling.
