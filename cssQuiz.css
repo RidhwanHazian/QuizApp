@@ -209,6 +209,7 @@ body {
 .quiz-footer .next-question-btn {
     display: inline-flex;
     gap: 5x;
+    visibility: hidden;
     align-items: center;
     padding: 9px 17px;
 }
