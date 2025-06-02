@@ -1,11 +1,39 @@
 const answerOptions = document.querySelector(".answer-options");
 const nextQuestionBtn = document.querySelector(".next-question-btn");
-const questionStatus = document.querySelector(".question-status")
+const questionStatus = document.querySelector(".question-status");
+const timerDisplay = document.querySelector(".time-duration");
 
+const QUIZ_TIME = 15;
+let currentTime = QUIZ_TIME;
+let timer = null;
 let quizCategory = "programming";
 let numberOfQuestions = 5;
 let currentQuestion = null;
 const questionIndexHistory = [];
+
+const resetTimer = () => {
+    clearInterval(timer);
+    currentTime = QUIZ_TIME;
+    timerDisplay.textContent = `${currentTime}s`;
+}
+
+//Quiz timer
+const startTimer = () => {
+    timer = setInterval(() => {
+        currentTime--;
+        timerDisplay.textContent = `${currentTime}s`;
+
+        if(currentTime <= 0){
+
+            clearInterval(timer);
+            highlightCorrectAnswer();
+            
+            nextQuestionBtn.style.visibility = "visible";
+            answerOptions.querySelectorAll(".answer-option").forEach(option => option.style.pointerEvents = "none");
+            
+        }
+    }, 1000);
+}
 
 //Fetch random question based on category
 const getRandomQuestion = () => {
@@ -31,6 +59,7 @@ const highlightCorrectAnswer = () => {
 }
 
 const handleAnswer = (option, answerIndex) => {
+    clearInterval(timer);
     const isCorrect = currentQuestion.correctAnswer === answerIndex;
     option.classList.add(isCorrect ? 'correct' : 'incorrect');
 
@@ -39,17 +68,17 @@ const handleAnswer = (option, answerIndex) => {
     const iconHTML = `<span class="material-symbols-rounded">${isCorrect ? 'check_circle': 'cancel'}</span>`;
     option.insertAdjacentHTML("beforeend", iconHTML);
 
-    nextQuestionBtn.style.visibility = "visible";
-
     //Display all answer option
     answerOptions.querySelectorAll(".answer-option").forEach(option => option.style.pointerEvents = "none");
+    nextQuestionBtn.style.visibility = "visible";
 }
 
 const renderQuestion = () => {
     currentQuestion = getRandomQuestion();
     if(!currentQuestion) return;
-    console.log(currentQuestion);
 
+    resetTimer();
+    startTimer();
     //Update UI
     answerOptions.innerHTML = "";
     nextQuestionBtn.style.visibility = "hidden";
