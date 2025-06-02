@@ -204,6 +204,7 @@ body {
     align-items: center;
     border-top: 1px solid #81A1C1;
     color: #D8DEE9;
+    justify-content: space-between;
 }
 
 .quiz-footer .question-status {
