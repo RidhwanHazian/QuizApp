@@ -304,7 +304,7 @@ const questions = [
       {
         question: "What is 11²?",
         options: ["121", "131", "141", "111"],
-        correctAnswer: 3,
+        correctAnswer: 0,
       },
       {
         question: "What is 9 × 12?",
