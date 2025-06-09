@@ -334,7 +334,7 @@ const questions = [
       {
         question: "What is 3 × 7 + 2?",
         options: ["20", "21", "22", "23"],
-        correctAnswer: 1,
+        correctAnswer: 3,
       },
       {
         question: "What is the greatest common divisor (GCD) of 24 and 36?",
@@ -354,7 +354,7 @@ const questions = [
       {
         question: "What is the value of 10 × (5 + 3)?",
         options: ["80", "70", "60", "50"],
-        correctAnswer: 1,
+        correctAnswer: 0,
       },
       {
         question: "What is the value of 14 × 14?",
