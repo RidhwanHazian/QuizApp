@@ -20,6 +20,7 @@ Want to test it in action? Open the quiz in your browser:
 
 *(Insert a screenshot or GIF of your quiz in action here, e.g., question selection or answering)*
 
+---
 
 ## 🚀 Live Demo
 Try it locally by opening `index.html` in your browser:
