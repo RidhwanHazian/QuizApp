@@ -18,7 +18,10 @@ Want to test it in action? Open the quiz in your browser:
 
 ###  Quick Demo Screenshot
 
-*(Insert a screenshot or GIF of your quiz in action here, e.g., question selection or answering)*
+<p align="center">
+  <img src="assets/quizApp.gif" width="400" alt="Lo-fi anime studying" />
+</p>
+
 
 ---
 
